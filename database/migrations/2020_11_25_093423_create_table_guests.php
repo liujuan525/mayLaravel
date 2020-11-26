@@ -13,7 +13,7 @@ class CreateTableGuests extends Migration
      */
     public function up()
     {
-        Schema::create('guest', function (Blueprint $table) {
+        Schema::create('guests', function (Blueprint $table) {
             $table->increments('id');
             $table->string('cookie')->unique()->index();
             $table->timestamps();
@@ -27,6 +27,6 @@ class CreateTableGuests extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('guest');
+        Schema::dropIfExists('guests');
     }
 }

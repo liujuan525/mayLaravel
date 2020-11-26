@@ -13,7 +13,11 @@ class CreateTableGuestWishlists extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('wishlist_guests', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('guest_id')->comment('用户 ID');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +27,6 @@ class CreateTableGuestWishlists extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('wishlist_guests');
     }
 }
