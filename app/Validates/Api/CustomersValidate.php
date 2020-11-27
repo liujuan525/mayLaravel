@@ -18,34 +18,13 @@ class CustomersValidate
     ];
 
     /**
-     * validator method
-     * @param $data
-     * @param $rules
-     * @param $messages
-     * @param $attributes
-     * @return bool
-     */
-    function checkValidate($data, $rules, $messages, $attributes)
-    {
-        $validator = Validator::make($data, $rules, $messages, $attributes);
-        if ($validator->fails()) {
-            $messages = $validator->messages();
-
-            if (count($messages) != 0) {
-                return $validator->errors()->first();
-            }
-        }
-        return true;
-    }
-
-    /**
      * check customer id
      * @param $data
      * @return bool
      */
     public function checkCustomerId($data)
     {
-        return $this->checkValidate($data, $this->customer_id_rule, $this->messages, $this->attributes);
+        return checkValidate($data, $this->customer_id_rule, $this->messages, $this->attributes);
     }
 
 }

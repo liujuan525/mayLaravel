@@ -1,6 +1,8 @@
 <?php
+/** 请求接口时，需要在路径前面添加 api , 如：http://may.local/api/test */
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,13 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+// 测试路由
+Route::get('test', function () {
+    return 'Hello World';
 });
+
+Route::get('customer/index', 'Api\CustomerController@index');
+
+//Route::middleware('auth:api')->get('/user', function (Request $request) {
+//    return $request->user();
+//});
