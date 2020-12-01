@@ -15,13 +15,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// 测试路由
-Route::get('test', function () {
-    return 'Hello World';
-});
-
-Route::get('customer/index', 'Api\CustomerController@index');
-
-//Route::middleware('auth:api')->get('/user', function (Request $request) {
-//    return $request->user();
-//});
+Route::get('queue', 'Api\QueueController@index');
