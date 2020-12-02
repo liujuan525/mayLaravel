@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('queue', 'Api\QueueController@index');
+
+
+Route::get('test', 'Api\QueueController@test');
