@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('queue', 'Api\QueueController@index');
-
-
+Route::get('queue', 'Api\CustomerController@index');
 Route::get('test', 'Api\QueueController@test');
+
+Route::post('picture/mark', 'Api\PictureController@index');
