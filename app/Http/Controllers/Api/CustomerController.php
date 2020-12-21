@@ -11,7 +11,7 @@ class CustomerController extends Controller
     public function index(Request $request)
     {
         for($i = 0; $i < 10; $i++) {
-            dispatch(new TestJob($request->get('name') . $i))->onQueue("podcasts");
+            TestJob::dispatch($request->get('name'), $i)->onQueue("podcasts")->delay(now()->addMinutes(5));
         }
 
         return $request->get('name') . PHP_EOL;
