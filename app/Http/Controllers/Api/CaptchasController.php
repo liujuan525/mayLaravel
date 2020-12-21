@@ -13,7 +13,7 @@ class CaptchasController extends Controller
     {
         $key = 'captcha-' . Str::random(15);
         $phone = $request->phone;
-
+        // build() 创建图片验证码
         $captcha = $captchaBuilder->build();
         $expireAt = now()->addMinutes(2);
         // getPhrase() 获取验证码文本
