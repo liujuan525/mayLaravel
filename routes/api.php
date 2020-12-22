@@ -35,6 +35,10 @@ Route::prefix('v1')
                 Route::post('verificationCodes', 'VerificationCodesController@store')->name('verificationCodes.store');
                 // 用户注册
                 Route::post('users', 'UsersController@store')->name('users.store');
+                // 第三方登录(支持微信/微博)
+                Route::post('socials/{social_type}/authorizations', 'AuthorizationsController@socialStore')->where('social_type', 'wechat|weibo')->name('socials.authorizations.store');
+
+
             });
 
         Route::middleware('throttle:' . config('api.rate_limits.access'))
