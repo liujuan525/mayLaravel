@@ -77,3 +77,10 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## put 与 patch 的区别
+put 替换某个资源，需提供完整的资源信息；
+patch 部分修改资源，提供部分资源信息。
+
+
+
