@@ -280,8 +280,52 @@ Authorization : Bearer + token
 ```
 
 
+# 分类列表
 
+## 链接地址
+```
+{{may}}/api/v1/categories
+```
 
+## 请求方式
+- GET
+
+## 请求参数 
+```
+ 
+```
+
+## 请求结果
+```
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "分享",
+            "description": "分享创造，分享发现",
+            "post_count": 0
+        },
+        {
+            "id": 2,
+            "name": "教程",
+            "description": "开发技巧、推荐扩展包等",
+            "post_count": 0
+        },
+        {
+            "id": 3,
+            "name": "问答",
+            "description": "请保持友善，互帮互助",
+            "post_count": 0
+        },
+        {
+            "id": 4,
+            "name": "公告",
+            "description": "站点公告",
+            "post_count": 0
+        }
+    ]
+}
+```
 
 
 
