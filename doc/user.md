@@ -220,7 +220,7 @@ captcha_code：D3z1G
 ## 请求参数（form-data 格式请求）
 ```
 | key| value|
-| image | 上传图片 |
+| image | file |
 | type | avatar |
 ```
 
@@ -255,9 +255,9 @@ Authorization : Bearer + token
 ## 请求参数 body（x-www-form-urlencoded 格式请求）
 ```
 | key| value|
-| name | mayU |
-| avatar_image_id | 1 |
-| email | may@163.com |
+| name | string |
+| avatar_image_id | int |
+| email | string |
 ```
 
 ## 请求结果
@@ -346,9 +346,9 @@ Authorization : Bearer + token
 ## 请求参数 body（form-data 格式请求）
 ```
 | key| value|
-| title | test |
-| body | test content |
-| category_id | 1 |
+| title | string |
+| body | string |
+| category_id | int |
 ```
 
 ## 请求结果
@@ -369,6 +369,132 @@ Authorization : Bearer + token
     "updated_at": "2021-03-03 10:40:07"
 }
 ```
+
+
+# 话题修改
+
+## 链接地址
+```
+{{may}}/api/v1/topics/:id
+```
+
+## 请求方式
+- PATCH
+
+## 请求参数 Headers
+```
+Authorization : Bearer + token
+```
+
+## 请求参数 body（x-www-form-urlencoded 格式请求）
+```
+| key| value|
+| title | string |
+| body | string |
+| category_id | int |
+```
+
+## 请求结果
+```
+{
+    "id": 2,
+    "title": "test-update",
+    "body": "<p>body update</p>",
+    "category_id": 2,
+    "user_id": 1,
+    "reply_count": 0,
+    "view_count": 0,
+    "last_reply_user_id": 0,
+    "order": 0,
+    "excerpt": "body update",
+    "slug": "test2",
+    "created_at": "2021-03-03 11:37:30",
+    "updated_at": "2021-03-03 11:39:13"
+}
+```
+
+
+# 删除话题
+
+## 链接地址
+```
+{{may}}/api/v1/topics/:id
+```
+
+## 请求方式
+- DELETE
+
+## 请求参数 Headers
+```
+Authorization : Bearer + token
+```
+
+## 请求结果
+```
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
