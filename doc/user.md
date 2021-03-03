@@ -292,7 +292,7 @@ Authorization : Bearer + token
 
 ## 请求参数 
 ```
- 
+
 ```
 
 ## 请求结果
@@ -328,8 +328,47 @@ Authorization : Bearer + token
 ```
 
 
+# 发布话题
 
+## 链接地址
+```
+{{may}}/api/v1/topics
+```
 
+## 请求方式
+- POST
+
+## 请求参数 Headers
+```
+Authorization : Bearer + token
+```
+
+## 请求参数 body（form-data 格式请求）
+```
+| key| value|
+| title | test |
+| body | test content |
+| category_id | 1 |
+```
+
+## 请求结果
+```
+{
+    "id": 1,
+    "title": "test",
+    "body": "<p>test content</p>",
+    "category_id": 1,
+    "user_id": 1,
+    "reply_count": 0,
+    "view_count": 0,
+    "last_reply_user_id": 0,
+    "order": 0,
+    "excerpt": "test content",
+    "slug": null,
+    "created_at": "2021-03-03 10:40:07",
+    "updated_at": "2021-03-03 10:40:07"
+}
+```
 
 
 
