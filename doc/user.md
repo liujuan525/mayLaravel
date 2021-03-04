@@ -434,11 +434,163 @@ Authorization : Bearer + token
 ```
 
 
+# 话题列表
+
+## 链接地址
+```
+{{may}}/api/v1/topics
+```
+
+## 请求方式
+- GET
+
+## 请求参数 (params)
+```
+| key | type | value |
+| include | string | user,category |
+| filter[title] | string | test |
+| filter[category_id] | int | 1 |
+| filter[withOrder] | string | recent |
+```
+
+## 请求结果
+```
+{
+    "data": [
+        {
+            "id": 1,
+            "title": "test",
+            "body": "<p>test content</p>",
+            "category_id": 1,
+            "user_id": 1,
+            "reply_count": 0,
+            "view_count": 0,
+            "last_reply_user_id": 0,
+            "order": 0,
+            "excerpt": "test content",
+            "slug": "test",
+            "created_at": "2021-03-03 10:40:07",
+            "updated_at": "2021-03-03 10:40:07",
+            "user": {
+                "id": 1,
+                "name": "mayU",
+                "email_verified_at": null,
+                "created_at": "2020-12-03T11:05:52.000000Z",
+                "updated_at": "2021-03-02T09:27:12.000000Z",
+                "avatar": "http://may.local/uploads/images/avatars/202103/02/1_1614675764_9NYu5vqm3U.jpeg",
+                "introduction": null,
+                "notification_count": 0,
+                "last_actived_at": "2020-12-03T11:05:52.000000Z",
+                "bound_phone": true,
+                "bound_wechat": false
+            },
+            "category": {
+                "id": 1,
+                "name": "分享",
+                "description": "分享创造，分享发现",
+                "post_count": 0
+            }
+        }
+    ],
+    "links": {
+        "first": "http://may.local/api/v1/topics?page=1",
+        "last": "http://may.local/api/v1/topics?page=1",
+        "prev": null,
+        "next": null
+    },
+    "meta": {
+        "current_page": 1,
+        "from": 1,
+        "last_page": 1,
+        "path": "http://may.local/api/v1/topics",
+        "per_page": 15,
+        "to": 1,
+        "total": 1
+    }
+}
+```
 
 
+# 某个用户的话题列表
 
+## 链接地址
+```
+{{may}}/api/v1/users/:id/topics
+```
 
+## 请求方式
+- GET
 
+## 请求参数 (params)
+```
+| key | type | value |
+| include | string | category |
+```
+
+## 请求结果
+```
+{
+    "data": [
+        {
+            "id": 2,
+            "title": "test-update",
+            "body": "<p>body update</p>",
+            "category_id": 2,
+            "user_id": 1,
+            "reply_count": 0,
+            "view_count": 0,
+            "last_reply_user_id": 0,
+            "order": 0,
+            "excerpt": "body update",
+            "slug": "test2",
+            "created_at": "2021-03-03 11:37:30",
+            "updated_at": "2021-03-03 11:39:13",
+            "category": {
+                "id": 2,
+                "name": "教程",
+                "description": "开发技巧、推荐扩展包等",
+                "post_count": 0
+            }
+        },
+        {
+            "id": 1,
+            "title": "test",
+            "body": "<p>test content</p>",
+            "category_id": 1,
+            "user_id": 1,
+            "reply_count": 0,
+            "view_count": 0,
+            "last_reply_user_id": 0,
+            "order": 0,
+            "excerpt": "test content",
+            "slug": "test",
+            "created_at": "2021-03-03 10:40:07",
+            "updated_at": "2021-03-03 10:40:07",
+            "category": {
+                "id": 1,
+                "name": "分享",
+                "description": "分享创造，分享发现",
+                "post_count": 0
+            }
+        }
+    ],
+    "links": {
+        "first": "http://may.local/api/v1/users/1/topics?page=1",
+        "last": "http://may.local/api/v1/users/1/topics?page=1",
+        "prev": null,
+        "next": null
+    },
+    "meta": {
+        "current_page": 1,
+        "from": 1,
+        "last_page": 1,
+        "path": "http://may.local/api/v1/users/1/topics",
+        "per_page": 15,
+        "to": 2,
+        "total": 2
+    }
+}
+```
 
 
 
