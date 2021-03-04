@@ -82,6 +82,9 @@ Route::prefix('v1')
                     // 发布、修改、删除话题
                     Route::resource('topics', 'TopicsController')
                         ->only(['store', 'update', 'destroy']);
+                    // 发布回复
+                    Route::post('topics/{topic}/replies', 'RepliesController@store')
+                        ->name('topics.replies.store');
                 });
             });
 

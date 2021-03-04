@@ -629,8 +629,38 @@ Authorization : Bearer + token
 ```
 
 
+# 创建回复
 
+## 链接地址
+```
+{{may}}/api/v1/topics/:id/replies
+```
 
+## 请求方式
+- POST
+
+## 请求参数 Headers
+```
+Authorization : Bearer + token
+```
+
+## 请求参数 (form-data格式请求)
+```
+| key | type | value |
+| content | string | test | 
+```
+
+## 请求结果
+```
+{
+    "id": 1,
+    "user_id": 1,
+    "topic_id": 1,
+    "content": "<p>test</p>",
+    "created_at": "2021-03-04 18:55:42",
+    "updated_at": "2021-03-04 18:55:42"
+}
+```
 
 
 
