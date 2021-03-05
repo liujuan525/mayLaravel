@@ -686,13 +686,160 @@ Authorization : Bearer + token
 ## 请求结果
 
 
+# 某个话题的回复列表
+
+## 链接地址
+```
+{{may}}/api/v1/topics/:id/replies
+```
+
+## 请求方式
+- GET
+
+## 请求参数 Headers
+```
+Authorization : Bearer + token
+```
+
+## 请求参数 （params）
+```
+| key | type | value |
+| include | string | user | 
+```
+
+## 请求结果
+```
+{
+    "data": [
+        {
+            "id": 1,
+            "user_id": 1,
+            "topic_id": 1,
+            "content": "<p>test</p>",
+            "created_at": "2021-03-04 18:55:42",
+            "updated_at": "2021-03-04 18:55:42",
+            "user": {
+                "id": 1,
+                "name": "mayU",
+                "email_verified_at": null,
+                "created_at": "2020-12-03T11:05:52.000000Z",
+                "updated_at": "2021-03-02T09:27:12.000000Z",
+                "avatar": "http://may.local/uploads/images/avatars/202103/02/1_1614675764_9NYu5vqm3U.jpeg",
+                "introduction": null,
+                "notification_count": 0,
+                "last_actived_at": "2020-12-03T11:05:52.000000Z",
+                "bound_phone": true,
+                "bound_wechat": false
+            }
+        }
+    ],
+    "links": {
+        "first": "http://may.local/api/v1/topics/1/replies?page=1",
+        "last": "http://may.local/api/v1/topics/1/replies?page=1",
+        "prev": null,
+        "next": null
+    },
+    "meta": {
+        "current_page": 1,
+        "from": 1,
+        "last_page": 1,
+        "path": "http://may.local/api/v1/topics/1/replies",
+        "per_page": 15,
+        "to": 1,
+        "total": 1
+    }
+}
+```
 
 
+# 某个用户的回复列表
+
+## 链接地址
+```
+{{may}}/api/v1/users/:id/replies
+```
+
+## 请求方式
+- GET
+
+## 请求参数 Headers
+```
+Authorization : Bearer + token
+```
+
+## 请求参数 （params）
+```
+| key | type | value |
+| include | string | user | 
+```
+
+## 请求结果
+```
+{
+    "data": [
+        {
+            "id": 1,
+            "user_id": 1,
+            "topic_id": 1,
+            "content": "<p>test</p>",
+            "created_at": "2021-03-04 18:55:42",
+            "updated_at": "2021-03-04 18:55:42",
+            "user": {
+                "id": 1,
+                "name": "mayU",
+                "email_verified_at": null,
+                "created_at": "2020-12-03T11:05:52.000000Z",
+                "updated_at": "2021-03-02T09:27:12.000000Z",
+                "avatar": "http://may.local/uploads/images/avatars/202103/02/1_1614675764_9NYu5vqm3U.jpeg",
+                "introduction": null,
+                "notification_count": 0,
+                "last_actived_at": "2020-12-03T11:05:52.000000Z",
+                "bound_phone": true,
+                "bound_wechat": false
+            }
+        }
+    ],
+    "links": {
+        "first": "http://may.local/api/v1/users/1/replies?page=1",
+        "last": "http://may.local/api/v1/users/1/replies?page=1",
+        "prev": null,
+        "next": null
+    },
+    "meta": {
+        "current_page": 1,
+        "from": 1,
+        "last_page": 1,
+        "path": "http://may.local/api/v1/users/1/replies",
+        "per_page": 15,
+        "to": 1,
+        "total": 1
+    }
+}
+```
 
 
+# 某个用户的回复列表
 
+## 链接地址
+```
+{{may}}/api/v1/users/:id/replies
+```
 
+## 请求方式
+- GET
 
+## 请求参数 Headers
+```
+Authorization : Bearer + token
+```
+
+## 请求参数 （params）
+```
+| key | type | value |
+| include | string | user | 
+```
+
+## 请求结果
 
 
 
