@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Resources\ReplyResource;
 use App\Models\Reply;
 use App\Models\Topic;
 use Illuminate\Http\Request;
+use App\Http\Resources\ReplyResource;
 use App\Http\Requests\Api\ReplyRequest;
 
 class RepliesController extends Controller
@@ -19,5 +19,17 @@ class RepliesController extends Controller
         $reply->save();
 
         return new ReplyResource($reply);
+    }
+
+    // 删除回复
+    public function destroy(Topic $topic, Reply $reply)
+    {
+        if ($reply->topic_id != $topic->id) {
+            abort(404);
+        }
+        $this->authorize('destroy', $reply);
+        $reply->delete();
+
+        return response(null, 204);
     }
 }

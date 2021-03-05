@@ -663,7 +663,27 @@ Authorization : Bearer + token
 ```
 
 
+# 删除回复
 
+## 链接地址
+```
+{{may}}/api/v1/topics/:id/replies/:pid
+```
+
+## 请求方式
+- DELETE
+
+## 请求参数 Headers
+```
+Authorization : Bearer + token
+```
+
+## 请求参数
+```
+
+```
+
+## 请求结果
 
 
 
