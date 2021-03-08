@@ -842,6 +842,155 @@ Authorization : Bearer + token
 ## 请求结果
 
 
+# 消息通知列表
+
+## 链接地址
+```
+{{may}}/api/v1/notifications
+```
+
+## 请求方式
+- GET
+
+## 请求参数 Headers
+```
+Authorization : Bearer + token
+```
+
+## 请求参数 （params）
+```
+| key | type | value |
+```
+
+## 请求结果
+```
+{
+    "data": [
+        {
+            "id": "875a2c7f-d239-453d-83ee-f46fb2d61a34",
+            "type": "App\\Notifications\\TopicReplied",
+            "data": {
+                "reply_id": 2,
+                "reply_content": "<p>回复测试</p>",
+                "user_id": 6,
+                "user_name": "liujuan",
+                "user_avatar": "https://cdn.learnku.com/uploads/images/201710/30/1/TrJS40Ey5k.png",
+                "topic_link": "http://may.local/topics/1/test?#reply2",
+                "topic_id": 1,
+                "topic_title": "test"
+            },
+            "read_at": null,
+            "created_at": "2021-03-08 10:58:16"
+        }
+    ],
+    "links": {
+        "first": "http://may.local/api/v1/notifications?page=1",
+        "last": "http://may.local/api/v1/notifications?page=1",
+        "prev": null,
+        "next": null
+    },
+    "meta": {
+        "current_page": 1,
+        "from": 1,
+        "last_page": 1,
+        "path": "http://may.local/api/v1/notifications",
+        "per_page": 15,
+        "to": 1,
+        "total": 1
+    }
+}
+```
+
+
+# 消息通知统计
+
+## 链接地址
+```
+{{may}}/api/v1/notifications/stats
+```
+
+## 请求方式
+- GET
+
+## 请求参数 Headers
+```
+Authorization : Bearer + token
+```
+
+## 请求参数 （params）
+```
+| key | type | value |
+```
+
+## 请求结果
+```
+{
+    "unread_count": 1
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
