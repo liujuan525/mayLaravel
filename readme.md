@@ -79,8 +79,10 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 ## put 与 patch 的区别
-put 替换某个资源，需提供完整的资源信息；
-patch 部分修改资源，提供部分资源信息。
+- put 替换某个资源，需提供完整的资源信息；
+- patch 部分修改资源，提供部分资源信息。
 
-
+## tests 单元测试
+- Unit —— 单元测试是从程序员的角度编写的。它们用于确保类的特定方法执行一组特定任务。
+- Feature —— 功能测试是从用户的角度编写的。它们确保系统按照用户期望的那样运行，包括几个对象的相互作用，甚至是一个完整的 HTTP 请求。
 
