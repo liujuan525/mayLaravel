@@ -930,7 +930,27 @@ Authorization : Bearer + token
 ```
 
 
+# 消息通知已读
 
+## 链接地址
+```
+{{may}}/api/v1/user/read/notifications
+```
+
+## 请求方式
+- PATCH
+
+## 请求参数 Headers
+```
+Authorization : Bearer + token
+```
+
+## 请求参数 （params）
+```
+| key | type | value |
+```
+
+## 请求结果
 
 
 
