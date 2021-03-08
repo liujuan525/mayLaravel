@@ -7,9 +7,10 @@ use Cache;
 
 class Link extends Model
 {
+    public $cache_key = 'larabbs_links';
+
     protected $fillable = ['title', 'link'];
 
-    public $cache_key = 'larabbs_links';
     protected $cache_expire_in_seconds = 1440 * 60;
 
     public function getAllCached()

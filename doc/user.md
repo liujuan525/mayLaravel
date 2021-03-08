@@ -953,11 +953,91 @@ Authorization : Bearer + token
 ## 请求结果
 
 
+# 用户权限列表
+
+## 链接地址
+```
+{{may}}/api/v1/user/permissions
+```
+
+## 请求方式
+- GET
+
+## 请求参数 Headers
+```
+Authorization : Bearer + token
+```
+
+## 请求参数 （params）
+```
+| key | type | value |
+```
+
+## 请求结果
+```
+{
+    "data": []
+}
+```
 
 
+# 推荐资源列表
 
+## 链接地址
+```
+{{may}}/api/v1/links
+```
 
+## 请求方式
+- GET
 
+## 请求参数 Headers
+```
+Authorization : Bearer + token
+```
+
+## 请求参数 （params）
+```
+| key | type | value |
+```
+
+## 请求结果
+```
+{
+    "data": [
+        {
+            "id": 1,
+            "title": "Maurine Flatley",
+            "link": "http://www.ohara.com/soluta-inventore-est-quo-aut-tempora-adipisci-qui"
+        },
+        {
+            "id": 2,
+            "title": "Morris Farrell DVM",
+            "link": "http://www.daniel.net/dicta-consequatur-est-molestiae-quia-quisquam.html"
+        },
+        {
+            "id": 3,
+            "title": "Jaren Stiedemann",
+            "link": "https://grady.biz/libero-doloribus-cum-est-officiis-perferendis.html"
+        },
+        {
+            "id": 4,
+            "title": "Janessa Greenfelder DVM",
+            "link": "https://rath.info/et-a-magni-non-ut-vel-aliquid-rem-qui.html"
+        },
+        {
+            "id": 5,
+            "title": "Ms. Maggie Barton",
+            "link": "https://www.cronin.biz/fuga-minus-et-non-distinctio"
+        },
+        {
+            "id": 6,
+            "title": "Chelsie Zulauf",
+            "link": "http://emmerich.com/ea-quo-ex-ullam-culpa-repudiandae-est-dolorem-molestiae"
+        }
+    ]
+}
+```
 
 
 
