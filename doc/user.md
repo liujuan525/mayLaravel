@@ -447,7 +447,7 @@ Authorization : Bearer + token
 ## 请求参数 (params)
 ```
 | key | type | value |
-| include | string | user,category | [可选]
+| include | string | user,user.roles,category | [可选]
 | filter[title] | string | test | [可选]
 | filter[category_id] | int | 1 | [可选]
 | filter[withOrder] | string | recent | [可选]

@@ -23,6 +23,7 @@ class UserResource extends JsonResource
         $data = parent::toArray($request);
         $data['bound_phone'] = $this->resource->phone ? true : false; // 是否绑定手机
         $data['bound_wechat'] = ($this->resource->weixin_unionid || $this->resource->weixin_openid) ? true : false; // 是否绑定微信
+        $data['roles'] = RoleResource::collection($this->whenLoaded('roles'));
 
         return $data;
     }
