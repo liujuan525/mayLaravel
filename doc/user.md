@@ -1040,8 +1040,56 @@ Authorization : Bearer + token
 ```
 
 
+# 活跃用户
 
+## 链接地址
+```
+{{may}}/api/v1/actived/users
+```
 
+## 请求方式
+- GET
+
+## 请求参数 
+
+## 请求参数 （params）
+```
+| key | type | value |
+```
+
+## 请求结果
+```
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "mayU",
+            "email_verified_at": null,
+            "created_at": "2020-12-03T11:05:52.000000Z",
+            "updated_at": "2021-03-08T03:18:51.000000Z",
+            "avatar": "http://may.local/uploads/images/avatars/202103/02/1_1614675764_9NYu5vqm3U.jpeg",
+            "introduction": null,
+            "notification_count": 0,
+            "last_actived_at": "2020-12-03T11:05:52.000000Z",
+            "bound_phone": true,
+            "bound_wechat": false
+        },
+        {
+            "id": 6,
+            "name": "liujuan",
+            "email_verified_at": "2021-03-08T02:57:39.000000Z",
+            "created_at": "2021-03-08T02:51:58.000000Z",
+            "updated_at": "2021-03-08T02:51:58.000000Z",
+            "avatar": "https://cdn.learnku.com/uploads/images/201710/30/1/TrJS40Ey5k.png",
+            "introduction": null,
+            "notification_count": 0,
+            "last_actived_at": "2021-03-08T05:43:16.000000Z",
+            "bound_phone": false,
+            "bound_wechat": false
+        }
+    ]
+}
+```
 
 
 
