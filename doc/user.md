@@ -237,7 +237,7 @@ captcha_code：D3z1G
 ```
 
 
-# 编辑当前用户信息
+# 修改个人信息
 
 ## 链接地址
 ```
@@ -254,10 +254,11 @@ Authorization : Bearer + token
 
 ## 请求参数 body（x-www-form-urlencoded 格式请求）
 ```
-| key| value|
-| name | string |
-| avatar_image_id | int |
-| email | string |
+| key| type | value |
+| name | string | mayU |
+| avatar_image_id | int | 1 |
+| email | string | may@163.com |
+| registration_id | string | test_registration_id |
 ```
 
 ## 请求结果
@@ -1092,7 +1093,27 @@ Authorization : Bearer + token
 ```
 
 
+# 推荐资源列表
 
+## 链接地址
+```
+{{may}}/api/v1/links
+```
+
+## 请求方式
+- GET
+
+## 请求参数 Headers
+```
+Authorization : Bearer + token
+```
+
+## 请求参数 （params）
+```
+| key | type | value |
+```
+
+## 请求结果
 
 
 
